@@ -5,6 +5,14 @@ This project is a beginner-friendly deep learning exploration where I, a complet
 
 ---
 
+## 🌐 Deployment: Try it Live
+
+I deployed my trained model as an interactive web application using **Streamlit**. You can try it out here:
+
+### 👉 [Live App on Streamlit](https://killuasmurf-age-gender-predictor.streamlit.app/)
+
+---
+
 ## 📁 Dataset
 
 The dataset used is the [UTKFace facial dataset from Kaggle](https://www.kaggle.com/datasets/jangedoo/utkface-new), which contains over 20,000 face images labeled with:
@@ -561,23 +569,42 @@ plt.grid(True)
 plt.show()
 ```
 
+### 🧠 Retraining with Better Generalization
+
+To reduce overfitting and improve generalization, I **retrained the model** with the following improvements:
+
+- ✅ **L2 Regularization** on convolutional layers (`kernel_regularizer=l2(0.001)`)
+- ✅ **EarlyStopping** to halt training when validation loss stops improving
+- ✅ **Validation Split** increased to **15%**
+- ✅ **Hyperparameter tuning** using **Keras Tuner** with joint objectives:
+  - `val_age_output_mae` (minimize)
+  - `val_gender_output_accuracy` (maximize)
+  - Learning rate ∈ {0.0005, 0.001, 0.005, 0.01}
+---
+
+![New Training vs Validation Curves](image.png)
+
+### ✅ Final Model Evaluation
+
+
+### ✅ Final Model Evaluation (After Regularization + Callbacks)
+
 #### Age Prediction: Mean Absolute Error (MAE)
 
-- **Training MAE** shows a consistent downward trend, decreasing from ~11.5 to ~6.5 over 15 epochs.
-- **Validation MAE** fluctuates slightly between epochs but follows a **general downward trend**, stabilizing around **7.5–8.0**.
-- The **gap between training and validation MAE** remains small, indicating the model is **not overfitting** and generalizes well to unseen data.
+- 📉 **Training MAE** decreased steadily from ~8.5 → **5.8**, showing the model is learning age features more effectively.
+- 📉 **Validation MAE** started around 9 but **stabilized near 7.0–7.2**, much lower than earlier runs (~9+).
+- 📊 Smaller gap between training and validation curves suggests **less overfitting** and **better generalization**.
 
-✅ The model can predict age with a mean error of approximately **6–8 years**, which is reasonable for real-world image-based age estimation.
+✅ Final MAE: ~6–7 years — **robust age estimation** for real-world scenarios.
 
 ---
 
 #### Gender Prediction: Accuracy
 
-- **Training accuracy** improves steadily from ~72% to over **92%** by the final epoch.
-- **Validation accuracy** increases early on and then **stabilizes between 86% and 88%**, showing good generalization.
-- There is **no large divergence** between training and validation accuracy, suggesting the model is **not generalizing to** the training data.
+- 📈 **Training Accuracy** increased from ~85% → **94.5%**
+- 📈 **Validation Accuracy** stabilized around **90%**, close to training accuracy.
 
-✅ The gender classification model achieves **strong performance**, accurately predicting gender in nearly **9 out of 10 test cases**.
+✅ Final accuracy: **90% gender classification** on unseen data.
 
 
 #### 11. Age Prediction Evaluation - Predicted vs Actual Scatter Plot
