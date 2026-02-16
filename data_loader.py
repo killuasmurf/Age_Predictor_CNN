@@ -85,111 +85,63 @@ def load_fgnet(dataset_root):
 
 def load_b3fd(dataset_root, min_year=1980):
     """
-    Parses B3FD based on folder structure: 
-    root/B3FD/PersonName/ID_BirthDate_YearTaken.jpg
+    Parses B3FD images by filename pattern: ID_BirthDate_YearTaken.jpg
     Example: 41221068_1946-02-26_1968.jpg
     """
     print(f"   Searching for B3FD images taken after {min_year}...")
     data = []
     
-    # 1. Locate the B3FD root folder
-    # It might be nested, so we search for a folder literally named "B3FD"
-    b3fd_roots = list(dataset_root.rglob("B3FD"))
-    if not b3fd_roots:
-        print("   ⚠️ B3FD folder not found!")
-        return []
-    
-    # Use the first valid B3FD folder found
-    dataset_path = b3fd_roots[0]
-    
-    # 2. Walk through all person folders
-    # The structure is dataset_path / PersonName / Image.jpg
-    for person_folder in dataset_path.iterdir():
-        if not person_folder.is_dir():
-            continue
+    # Recursively walk through EVERY folder in datasets
+    for root, dirs, files in os.walk(dataset_root):
+        for file in files:
+            # Optimization: Only process .jpg files
+            if not file.lower().endswith('.jpg'):
+                continue
+                
+            # Parse Pattern: ID_BirthDate_YearTaken.jpg
+            # We split by '_'
+            parts = Path(file).stem.split('_')
             
-        for img_file in person_folder.glob("*.jpg"):
-            # Parse Filename: 41221068_1946-02-26_1968.jpg
-            # Parts: [ID, BirthDate, YearTaken]
-            parts = img_file.stem.split('_')
-            
+            # Must have at least 3 parts (ID, Date, Year)
             if len(parts) >= 3:
                 try:
-                    # Extract Year Taken (last part)
-                    year_taken = int(parts[-1])
+                    # 1. Extract Year Taken (Last part)
+                    year_taken_str = parts[-1]
+                    # Handle edge cases like "1980(1).jpg"
+                    if '(' in year_taken_str: year_taken_str = year_taken_str.split('(')[0]
+                    year_taken = int(year_taken_str)
                     
-                    # FILTER: Only want images after 1980
+                    # 2. Filter by Year
                     if year_taken < min_year:
                         continue
                         
-                    # Extract Birth Year to calculate Age
-                    birth_date = parts[1] # "1946-02-26"
+                    # 3. Extract Birth Year (Second part: 1946-02-26)
+                    birth_date = parts[1]
+                    if '-' not in birth_date: continue
                     birth_year = int(birth_date.split('-')[0])
                     
+                    # 4. Calculate Age
                     age = year_taken - birth_year
                     
-                    # Sanity check for age (0 to 116)
+                    # 5. Sanity Check
                     if age < 0 or age > 116:
                         continue
-
-                    # Gender is NOT in the filename.
-                    # We can try to infer it if you have a metadata CSV, 
-                    # but for now, we set it to -1 (unknown) or skip if you strictly need gender.
-                    # If you strictly need gender, we MUST use the CSV method or an external lookup.
-                    # HOWEVER, usually B3FD comes with a CSV mapping "PersonName" -> "Gender".
-                    # Let's check for a metadata file nearby to build a gender map.
                     
-                    # For now, to get the code running, we will set Gender to -1.
-                    # You can use masked loss to handle this, OR we can try to find the CSV.
-                    
+                    # 6. Add to list (Gender is -1 as requested)
                     data.append({
-                        'image_path': img_file,
+                        'image_path': Path(root) / file,
                         'age': age,
-                        'gender': -1, # Placeholder (see note below)
+                        'gender': -1,
                         'source': 'b3fd'
                     })
                     
-                except ValueError:
+                except (ValueError, IndexError):
+                    # Skip files that don't match the math/format
                     continue
 
-    # --- OPTIONAL: Try to fix Gender from CSV ---
-    # If we collected data, let's try to find a CSV to fill in the genders
-    if data:
-        print(f"   Found {len(data)} images. Attempting to load gender metadata...")
-        csv_files = list(dataset_root.rglob("*.csv"))
-        gender_map = {}
-        
-        for csv in csv_files:
-            try:
-                df = pd.read_csv(csv)
-                # Look for columns like 'name'/'person' and 'gender'
-                df.columns = [c.lower() for c in df.columns]
-                if 'name' in df.columns and 'gender' in df.columns:
-                    # Create a map: "PersonName" -> 0/1
-                    for _, row in df.iterrows():
-                        g = row['gender']
-                        if isinstance(g, str):
-                            g = 0 if g.lower() in ['male', 'm'] else 1
-                        gender_map[row['name']] = g
-                    break # Stop after finding the first valid metadata file
-            except: continue
-        
-        if gender_map:
-            print(f"   Loaded gender labels for {len(gender_map)} people.")
-            # Update the data list with genders
-            valid_data = []
-            for item in data:
-                # Person folder name is the parent of the image
-                person_name = item['image_path'].parent.name
-                if person_name in gender_map:
-                    item['gender'] = gender_map[person_name]
-                    valid_data.append(item)
-            data = valid_data
-        else:
-            print("   ⚠️ No gender metadata found. Returning data with Gender = -1.")
-
-    print(f"   Loaded {len(data)} B3FD images (Post-1980).")
+    print(f"   Loaded {len(data)} B3FD images.")
     return data
+
 def get_unified_dataset(dataset_dir='./datasets'):
     """Main function to call from your notebook"""
     root = Path(dataset_dir)
@@ -199,9 +151,12 @@ def get_unified_dataset(dataset_dir='./datasets'):
     data.extend(load_utkface(root))
     data.extend(load_adience(root))
     data.extend(load_fgnet(root))
-    data.extend(load_b3fd(root))
+    
+    # Load B3FD (Defaults to 1980+)
+    data.extend(load_b3fd(root, min_year=1980))
     
     df = pd.DataFrame(data)
     print(f"Loaded {len(df)} images total.")
-    print(df['source'].value_counts())
+    if not df.empty:
+        print(df['source'].value_counts())
     return df
