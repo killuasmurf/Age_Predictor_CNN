@@ -1,0 +1,23 @@
+2026-02-19 16:13:00,046 INFO    MainThread:10808 [wandb_init.py:setup_run_log_directory():717] Logging user logs to c:\Users\linmy\Age_Gender_predictor_CNN\wandb\run-20260219_161300-mznuy3wj\logs\debug.log
+2026-02-19 16:13:00,046 INFO    MainThread:10808 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to c:\Users\linmy\Age_Gender_predictor_CNN\wandb\run-20260219_161300-mznuy3wj\logs\debug-internal.log
+2026-02-19 16:13:00,046 INFO    MainThread:10808 [wandb_init.py:init():844] calling init triggers
+2026-02-19 16:13:00,046 INFO    MainThread:10808 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'fine_tune_lr': 1e-05, 'unfreeze_layers': 80, 'backbone': 'EfficientNetB0', 'fine_tune_epochs': 60, 'early_stopping_patience': 6, 'reduce_lr_factor': 0.3, 'reduce_lr_patience': 3, '_wandb': {}}
+2026-02-19 16:13:03,136 INFO    MainThread:10808 [wandb_init.py:init():892] starting backend
+2026-02-19 16:13:03,136 INFO    MainThread:10808 [wandb_init.py:init():895] sending inform_init request
+2026-02-19 16:13:03,142 INFO    MainThread:10808 [wandb_init.py:init():903] backend started and connected
+2026-02-19 16:13:03,148 INFO    MainThread:10808 [wandb_run.py:_label_probe_notebook():1333] probe notebook
+2026-02-19 16:13:03,171 INFO    MainThread:10808 [wandb_run.py:_label_probe_notebook():1343] Unable to probe notebook: 'charmap' codec can't decode byte 0x8f in position 7672: character maps to <undefined>
+2026-02-19 16:13:03,171 INFO    MainThread:10808 [wandb_init.py:init():973] updated telemetry
+2026-02-19 16:13:03,212 INFO    MainThread:10808 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-02-19 16:13:03,892 INFO    MainThread:10808 [wandb_init.py:init():1042] starting run threads in backend
+2026-02-19 16:13:04,132 INFO    MainThread:10808 [wandb_run.py:_console_start():2524] atexit reg
+2026-02-19 16:13:04,132 INFO    MainThread:10808 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-02-19 16:13:04,132 INFO    MainThread:10808 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-02-19 16:13:04,132 INFO    MainThread:10808 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-02-19 16:13:04,133 INFO    MainThread:10808 [wandb_init.py:init():1082] run started, returning control to user process
+2026-02-19 16:23:59,094 INFO    MainThread:10808 [wandb_run.py:_finish():2291] finishing run linmyat9-nus/age-prediction/mznuy3wj
+2026-02-19 16:23:59,096 INFO    MainThread:10808 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-02-19 16:23:59,099 INFO    MainThread:10808 [wandb_run.py:_restore():2472] restore
+2026-02-19 16:23:59,099 INFO    MainThread:10808 [wandb_run.py:_restore():2478] restore done
+2026-02-19 16:24:01,153 INFO    MainThread:10808 [wandb_run.py:_footer_sync_info():3868] logging synced files

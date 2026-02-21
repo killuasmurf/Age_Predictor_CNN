@@ -2,3 +2,6 @@
 datasets/
 processed_faces/
 VC_redist.x64.exe
+src_copy.ipynb
+venv/
+efficientnet_tuning/

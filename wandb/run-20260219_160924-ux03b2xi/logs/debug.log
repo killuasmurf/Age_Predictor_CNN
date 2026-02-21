@@ -1,0 +1,100 @@
+2026-02-19 16:09:24,851 INFO    MainThread:10808 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-02-19 16:09:24,852 INFO    MainThread:10808 [wandb_setup.py:_flush():81] Configure stats pid to 10808
+2026-02-19 16:09:24,852 INFO    MainThread:10808 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-02-19 16:09:24,852 WARNING MainThread:10808 [wandb_setup.py:_flush():81] interrupted
+Traceback (most recent call last):
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\IPython\core\interactiveshell.py", line 3701, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\linmy\AppData\Local\Temp\ipykernel_10808\4185082143.py", line 9, in <module>
+    wandb.init(
+    ~~~~~~~~~~^
+        project="age-prediction",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        }
+        ^
+    )
+    ^
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1516, in init
+    wi.maybe_login(init_settings)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 193, in maybe_login
+    wandb_login._login(
+    ~~~~~~~~~~~~~~~~~~^
+        host=run_settings.base_url,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        update_api_key=explicit_key is None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\wandb_login.py", line 190, in _login
+    auth = _find_or_prompt_for_key(
+        settings,
+    ...<4 lines>...
+        input_timeout=timeout,
+    )
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\wandb_login.py", line 266, in _find_or_prompt_for_key
+    auth = wbauth.authenticate_session(
+        host=host,
+    ...<5 lines>...
+        relogin=relogin,
+    )
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\lib\wbauth\authenticate.py", line 131, in authenticate_session
+    return _use_prompted_auth(
+        host=host,
+    ...<3 lines>...
+        input_timeout=input_timeout,
+    )
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\lib\wbauth\authenticate.py", line 263, in _use_prompted_auth
+    api_key = prompt.prompt_and_save_api_key(
+        host=host,
+    ...<3 lines>...
+        input_timeout=input_timeout,
+    )
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\lib\wbauth\prompt.py", line 52, in prompt_and_save_api_key
+    api_key = _prompt_api_key(
+        host=host,
+    ...<3 lines>...
+        input_timeout=input_timeout,
+    )
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\sdk\lib\wbauth\prompt.py", line 90, in _prompt_api_key
+    choice = util.prompt_choices(choices, input_timeout=input_timeout)
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\util.py", line 1343, in prompt_choices
+    choice = terminput("Enter your choice: ", timeout=input_timeout)
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\errors\term.py", line 321, in terminput
+    return _terminput(prefixed_prompt, timeout=timeout, hide=hide)
+  File "c:\Users\linmy\Age_Gender_predictor_CNN\venv\Lib\site-packages\wandb\errors\term.py", line 382, in _terminput
+    raise KeyboardInterrupt from None
+KeyboardInterrupt
+2026-02-19 16:09:24,860 INFO    MainThread:10808 [wandb_init.py:setup_run_log_directory():717] Logging user logs to c:\Users\linmy\Age_Gender_predictor_CNN\wandb\run-20260219_160924-ux03b2xi\logs\debug.log
+2026-02-19 16:09:24,860 INFO    MainThread:10808 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to c:\Users\linmy\Age_Gender_predictor_CNN\wandb\run-20260219_160924-ux03b2xi\logs\debug-internal.log
+2026-02-19 16:09:24,860 INFO    MainThread:10808 [wandb_init.py:monkeypatch_ipython():636] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002EFCD04C7D0>
+2026-02-19 16:09:24,861 INFO    MainThread:10808 [wandb_init.py:init():844] calling init triggers
+2026-02-19 16:09:24,861 INFO    MainThread:10808 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'fine_tune_lr': 1e-05, 'unfreeze_layers': 80, 'backbone': 'EfficientNetB0', 'fine_tune_epochs': 50, 'early_stopping_patience': 6, 'reduce_lr_factor': 0.3, 'reduce_lr_patience': 3, '_wandb': {}}
+2026-02-19 16:09:24,861 INFO    MainThread:10808 [wandb_init.py:init():892] starting backend
+2026-02-19 16:09:27,694 INFO    MainThread:10808 [wandb_init.py:init():895] sending inform_init request
+2026-02-19 16:09:27,816 INFO    MainThread:10808 [wandb_init.py:init():903] backend started and connected
+2026-02-19 16:09:27,824 INFO    MainThread:10808 [wandb_run.py:_label_probe_notebook():1333] probe notebook
+2026-02-19 16:09:27,859 INFO    MainThread:10808 [wandb_run.py:_label_probe_notebook():1343] Unable to probe notebook: 'charmap' codec can't decode byte 0x8f in position 7672: character maps to <undefined>
+2026-02-19 16:09:27,859 INFO    MainThread:10808 [wandb_init.py:init():973] updated telemetry
+2026-02-19 16:09:28,309 INFO    MainThread:10808 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-02-19 16:09:29,262 INFO    MainThread:10808 [wandb_init.py:init():1042] starting run threads in backend
+2026-02-19 16:09:29,768 INFO    MainThread:10808 [wandb_run.py:_console_start():2524] atexit reg
+2026-02-19 16:09:29,768 INFO    MainThread:10808 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-02-19 16:09:29,768 INFO    MainThread:10808 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-02-19 16:09:29,768 INFO    MainThread:10808 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-02-19 16:09:29,774 INFO    MainThread:10808 [wandb_init.py:init():1082] run started, returning control to user process
+2026-02-19 16:09:49,378 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-19 16:12:59,167 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-19 16:12:59,168 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-19 16:13:00,047 INFO    MainThread:10808 [wandb_run.py:_finish():2291] finishing run linmyat9-nus/age-prediction/ux03b2xi
+2026-02-19 16:13:01,691 INFO    MainThread:10808 [jupyter.py:save_history():435] not saving jupyter history
+2026-02-19 16:13:01,691 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] not saving jupyter notebook
+2026-02-19 16:13:01,691 INFO    MainThread:10808 [wandb_init.py:_jupyter_teardown():621] cleaning up jupyter logic
+2026-02-19 16:13:01,691 INFO    MainThread:10808 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-02-19 16:13:01,692 INFO    MainThread:10808 [wandb_run.py:_restore():2472] restore
+2026-02-19 16:13:01,692 INFO    MainThread:10808 [wandb_run.py:_restore():2478] restore done
+2026-02-19 16:13:03,134 INFO    MainThread:10808 [wandb_run.py:_footer_sync_info():3868] logging synced files

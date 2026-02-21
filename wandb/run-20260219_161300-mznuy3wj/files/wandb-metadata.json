@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-11-10.0.22631-SP0",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2026-02-19T08:13:00.038969Z",
+  "program":  "c:\\Users\\linmy\\Age_Gender_predictor_CNN\\src.ipynb",
+  "codePath":  "c:\\Users\\linmy\\Age_Gender_predictor_CNN\\src.ipynb",
+  "codePathLocal":  "src.ipynb",
+  "git":  {
+    "remote":  "https://github.com/killuasmurf/Age_Gender_predictor_CNN.git",
+    "commit":  "ff461d4a408dba63b7c123a057ed007694e5f0e4"
+  },
+  "email":  "linmyat9@gmail.com",
+  "root":  "c:\\Users\\linmy\\Age_Gender_predictor_CNN",
+  "host":  "linmyat",
+  "executable":  "c:\\Users\\linmy\\Age_Gender_predictor_CNN\\venv\\Scripts\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "511172407296",
+      "used":  "173901758464"
+    }
+  },
+  "memory":  {
+    "total":  "14702026752"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "memoryTotal":  "6442450944",
+      "cudaCores":  2560,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-08e2f7f6-0ae3-21f8-9b29-ea7b57f5390e"
+    }
+  ],
+  "cudaVersion":  "12.5",
+  "writerId":  "wclk5iuurto8kdu7xcm1lkvb6sdpakza"
+}
