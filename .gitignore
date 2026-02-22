@@ -1,5 +1,6 @@
 .env
 datasets/
+kt_search
 processed_faces/
 VC_redist.x64.exe
 src_copy.ipynb
