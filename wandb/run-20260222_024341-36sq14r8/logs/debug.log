@@ -1,0 +1,36 @@
+2026-02-22 02:43:41,161 INFO    MainThread:10808 [wandb_init.py:setup_run_log_directory():717] Logging user logs to c:\Users\linmy\Age_Gender_predictor_CNN\wandb\run-20260222_024341-36sq14r8\logs\debug.log
+2026-02-22 02:43:41,161 INFO    MainThread:10808 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to c:\Users\linmy\Age_Gender_predictor_CNN\wandb\run-20260222_024341-36sq14r8\logs\debug-internal.log
+2026-02-22 02:43:41,161 INFO    MainThread:10808 [wandb_init.py:monkeypatch_ipython():636] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002F13FB90B90>
+2026-02-22 02:43:41,162 INFO    MainThread:10808 [wandb_init.py:init():844] calling init triggers
+2026-02-22 02:43:41,162 INFO    MainThread:10808 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'warmup_lr': 0.0005, 'warmup_epochs': 10, 'fine_tune_lr': 5e-05, 'fine_tune_epochs': 60, 'unfreeze_layers': 80, 'backbone': 'EfficientNetB0', '_wandb': {}}
+2026-02-22 02:43:41,162 INFO    MainThread:10808 [wandb_init.py:init():892] starting backend
+2026-02-22 02:43:41,162 INFO    MainThread:10808 [wandb_init.py:init():895] sending inform_init request
+2026-02-22 02:43:41,171 INFO    MainThread:10808 [wandb_init.py:init():903] backend started and connected
+2026-02-22 02:43:41,178 INFO    MainThread:10808 [wandb_run.py:_label_probe_notebook():1333] probe notebook
+2026-02-22 02:43:41,181 INFO    MainThread:10808 [wandb_run.py:_label_probe_notebook():1343] Unable to probe notebook: 'charmap' codec can't decode byte 0x8f in position 7672: character maps to <undefined>
+2026-02-22 02:43:41,182 INFO    MainThread:10808 [wandb_init.py:init():973] updated telemetry
+2026-02-22 02:43:41,225 INFO    MainThread:10808 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-02-22 02:43:41,930 INFO    MainThread:10808 [wandb_init.py:init():1042] starting run threads in backend
+2026-02-22 02:43:42,239 INFO    MainThread:10808 [wandb_run.py:_console_start():2524] atexit reg
+2026-02-22 02:43:42,239 INFO    MainThread:10808 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-02-22 02:43:42,240 INFO    MainThread:10808 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-02-22 02:43:42,240 INFO    MainThread:10808 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-02-22 02:43:42,241 INFO    MainThread:10808 [wandb_init.py:init():1082] run started, returning control to user process
+2026-02-22 03:08:12,868 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 03:08:15,949 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 03:08:15,949 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 03:08:15,975 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 03:08:17,376 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 03:08:17,376 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 03:08:17,389 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 03:08:19,599 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 03:08:19,599 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 03:08:19,606 INFO    MainThread:10808 [wandb_run.py:_finish():2291] finishing run linmyat9-nus/age-prediction/36sq14r8
+2026-02-22 03:08:19,618 INFO    MainThread:10808 [jupyter.py:save_history():435] not saving jupyter history
+2026-02-22 03:08:19,618 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] not saving jupyter notebook
+2026-02-22 03:08:19,618 INFO    MainThread:10808 [wandb_init.py:_jupyter_teardown():621] cleaning up jupyter logic
+2026-02-22 03:08:19,619 INFO    MainThread:10808 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-02-22 03:08:19,624 INFO    MainThread:10808 [wandb_run.py:_restore():2472] restore
+2026-02-22 03:08:19,624 INFO    MainThread:10808 [wandb_run.py:_restore():2478] restore done
+2026-02-22 03:08:21,640 INFO    MainThread:10808 [wandb_run.py:_footer_sync_info():3868] logging synced files

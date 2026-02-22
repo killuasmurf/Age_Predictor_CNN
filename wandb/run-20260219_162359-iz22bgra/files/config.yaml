@@ -1,0 +1,91 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            ft0y69bymgb63g7yklr4fppugqkvtyzk:
+                codePath: c:\Users\linmy\Age_Gender_predictor_CNN\src.ipynb
+                codePathLocal: src.ipynb
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "12.5"
+                disk:
+                    /:
+                        total: "511172407296"
+                        used: "173830897664"
+                email: linmyat9@gmail.com
+                executable: c:\Users\linmy\Age_Gender_predictor_CNN\venv\Scripts\python.exe
+                git:
+                    commit: ff461d4a408dba63b7c123a057ed007694e5f0e4
+                    remote: https://github.com/killuasmurf/Age_Gender_predictor_CNN.git
+                gpu: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 2560
+                      memoryTotal: "6442450944"
+                      name: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+                      uuid: GPU-08e2f7f6-0ae3-21f8-9b29-ea7b57f5390e
+                host: linmyat
+                memory:
+                    total: "14702026752"
+                os: Windows-11-10.0.22631-SP0
+                program: c:\Users\linmy\Age_Gender_predictor_CNN\src.ipynb
+                python: CPython 3.13.3
+                root: c:\Users\linmy\Age_Gender_predictor_CNN
+                startedAt: "2026-02-19T08:23:59.068435Z"
+                writerId: ft0y69bymgb63g7yklr4fppugqkvtyzk
+        m:
+            - "1": epoch/epoch
+              "6":
+                - 3
+              "7": []
+            - "2": epoch/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.13.3
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 41
+                - 49
+                - 53
+            "2":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 41
+                - 49
+                - 53
+            "3":
+                - 2
+                - 7
+                - 16
+                - 38
+            "4": 3.13.3
+            "5": 0.25.0
+            "8":
+                - 2
+                - 1
+                - 3
+            "12": 0.25.0
+            "13": windows-amd64
+backbone:
+    value: EfficientNetB0
+early_stopping_patience:
+    value: 6
+fine_tune_epochs:
+    value: 60
+fine_tune_lr:
+    value: 1e-05
+reduce_lr_factor:
+    value: 0.5
+reduce_lr_patience:
+    value: 2
+unfreeze_layers:
+    value: 80

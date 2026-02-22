@@ -47,3 +47,35 @@ config: {'fine_tune_lr': 1e-05, 'unfreeze_layers': 80, 'backbone': 'EfficientNet
 2026-02-20 01:59:00,214 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
 2026-02-20 01:59:00,223 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
 2026-02-20 01:59:00,223 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:06:02,834 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:06:10,938 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:06:10,938 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:06:10,945 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:06:27,698 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:06:27,698 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:06:27,707 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:06:42,403 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:06:42,404 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:06:42,409 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:09:10,337 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:09:10,337 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:09:10,349 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:09:19,320 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:09:19,321 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:09:19,325 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:24:56,840 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:24:56,840 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:24:57,066 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:39:14,257 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:39:14,258 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:39:14,274 INFO    MainThread:10808 [wandb_init.py:_post_run_cell_hook():606] [no run ID] resuming backend
+2026-02-22 02:41:12,508 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-02-22 02:41:12,508 INFO    MainThread:10808 [wandb_init.py:_pre_run_cell_hook():595] [no run ID] pausing backend
+2026-02-22 02:41:13,467 INFO    MainThread:10808 [wandb_run.py:_finish():2291] finishing run linmyat9-nus/age-prediction/iz22bgra
+2026-02-22 02:41:13,473 INFO    MainThread:10808 [jupyter.py:save_history():435] not saving jupyter history
+2026-02-22 02:41:13,473 INFO    MainThread:10808 [jupyter.py:save_ipynb():362] not saving jupyter notebook
+2026-02-22 02:41:13,473 INFO    MainThread:10808 [wandb_init.py:_jupyter_teardown():621] cleaning up jupyter logic
+2026-02-22 02:41:13,473 INFO    MainThread:10808 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-02-22 02:41:13,478 INFO    MainThread:10808 [wandb_run.py:_restore():2472] restore
+2026-02-22 02:41:13,478 INFO    MainThread:10808 [wandb_run.py:_restore():2478] restore done
+2026-02-22 02:41:15,530 INFO    MainThread:10808 [wandb_run.py:_footer_sync_info():3868] logging synced files
