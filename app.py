@@ -133,8 +133,8 @@ with st.sidebar:
     st.markdown("## ⚙️ About")
     st.markdown(
         """
-        **Model:** EfficientNetB0  
-        **Training:** Two-phase (warm-up + fine-tune)  
+        **Model:** EfficientNetB0 with YOLOv8 face cropping\n
+        **Training:** Two-phase (warm-up + fine-tune)\n  
         **Outputs:**
         - 📊 Age group (5 classes)
         - 🎂 Exact age (regression)
@@ -152,14 +152,13 @@ with st.sidebar:
 
     st.markdown("---")
     use_yolo = st.checkbox("Auto-detect & crop face (YOLO)", value=True)
-    st.caption("Uncheck if the image is already a tight face crop.")
+    st.caption("Unless... the image is already a tight face crop.")
 
 
 # ── Main UI ───────────────────────────────────────────────────────────────────
 st.markdown("# 🧬 Age Predictor")
 st.markdown(
-    "Upload a photo and the model will estimate the person's **exact age** "
-    "and **age group** using a fine-tuned **EfficientNetB0** backbone."
+    "Upload a clear photo and the model will estimate the person's **exact age** and **age group**"
 )
 st.markdown("---")
 
