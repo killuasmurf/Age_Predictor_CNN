@@ -1,7 +1,10 @@
 # Age Prediction from Facial Images
 
 A deep learning CNN pipeline that predicts a person's **exact age** and **age group** from facial images, using transfer learning with EfficientNetB0 and YOLO-based face detection.
-👉 [Live App on Streamlit](https://myats-age-predictor.streamlit.app/)
+
+##### 👉 [Live App on Streamlit](https://myats-age-predictor.streamlit.app/)
+
+##### 📝 [Medium Article](https://medium.com/@linmyat9/age-predictor-computer-vision-project-with-efficientnet-transfer-learning-yolo-face-cropping-a0f8c25718af?postPublishedType=repub)
 
 - **Age Regression** — predict the exact age (in years)
 - **Age Group Classification** — classify into 5 groups: Child (0–12), Youth (13–25), Adult (26–42), Middle Age (43–60), Senior (60+)
