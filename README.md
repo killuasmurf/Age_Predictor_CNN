@@ -54,7 +54,7 @@ Input (224×224×3)
 
 ---
 
-## Training Strategy
+## Training Strategy: Transfer Learning
 
 Training was done in **two phases** to protect pre-trained ImageNet weights:
 
